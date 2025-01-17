@@ -1,0 +1,31 @@
+.trending-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 4rem 8rem;
+}
+.trending_title h2 {
+  font-size: 5rem;
+  color: white;
+  padding: 10rem 4rem 1rem;
+}
+
+@media (max-width: 762px) {
+  .trending_title h2 {
+    padding: 11rem 2rem 1rem;
+  }
+  .trending-section {
+    padding: 1rem 2rem 5rem;
+    /* gap: 2rem; */
+    justify-content: space-around;
+  }
+}
+@media (max-width: 462px) {
+  .trending-section {
+    gap: 0rem;
+    padding: 1rem 1rem 5rem;
+  }
+}

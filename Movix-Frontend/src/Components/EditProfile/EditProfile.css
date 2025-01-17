@@ -1,0 +1,96 @@
+.profile_form {
+	width: 50%;
+	min-height: 60vh;
+	border: 5px solid white;
+	position: fixed;
+	display: flex;
+	z-index: 999;
+	top: 18%;
+	flex-direction: column;
+	left: 25%;
+	padding: 2rem 2rem 2rem 4rem;
+	border-radius: 2rem;
+  }
+  .profile_form h2 {
+	font-size: 2rem;
+	text-align: center;
+	color: white;
+  }
+  .profile_form > label {
+	font-size: 2rem;
+	color: white;
+	margin: 1.5rem 1rem 1rem 0;
+  }
+  .profile_form > input {
+	width: 90%;
+	height: 8%;
+	color: white;
+	padding: 1rem;
+	font-size: 1.5rem;
+	outline: none;
+  }
+  .profile_form > input::placeholder {
+	color: gray;
+  }
+  .profile_form > button {
+	width: 20%;
+	height: 30%;
+	color: white;
+	font-size: 2rem;
+	margin-top: 1rem;
+	border: 2px solid white;
+	cursor: pointer;
+	border-radius: 1rem;
+  }
+  .icon {
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	right: 10%;
+  }
+  .Edit_genre,.Edit_select_genre {
+	border-radius: 1rem;
+    display: inline-flex;
+    color: white;
+    background-color: #a8a196;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    margin: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+  }
+
+  .Edit_select_genre {
+
+	background-color: #9288f8;
+
+  }
+  .Edit_genre_section {
+	margin-top: 0.5rem;
+  }
+  
+  .profile_form > button {
+	width: 20%;
+    height: fit-content;
+    padding: 0.5rem;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  .profile_form >button:hover{
+	background: white;
+	color: black;
+	font-weight: 500;
+  }
+  @media (max-width: 462px) {
+	.profile_form {
+	  width: 80%;
+	  min-height: fit-content;
+	  left: 10%;
+	}
+  }
+ 
+  

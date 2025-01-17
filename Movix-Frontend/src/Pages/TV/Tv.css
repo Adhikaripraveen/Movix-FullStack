@@ -1,0 +1,31 @@
+.tv_title h2 {
+  font-size: 5rem;
+  color: #87a2fb;
+  /* text-align: center; */
+  padding: 10rem 4rem 1rem;
+}
+.tv_section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 1rem 4rem 8rem;
+  justify-content: space-around;
+}
+
+@media (max-width: 762px) {
+  .tv_title h2 {
+    padding: 10rem 2rem 1rem;
+  }
+  .tv_section {
+    padding: 1rem 2rem 5rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 462px) {
+  .tv_section {
+    padding: 1rem 1rem 5rem;
+    gap: 0rem;
+  }
+}

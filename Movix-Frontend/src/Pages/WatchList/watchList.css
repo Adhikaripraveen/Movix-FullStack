@@ -1,0 +1,13 @@
+.watchlist_section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 10rem 2rem 6rem;
+}
+.empty_watchlist {
+  color: white;
+  font-size: 2rem;
+}

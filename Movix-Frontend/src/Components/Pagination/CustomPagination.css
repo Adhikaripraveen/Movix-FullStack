@@ -1,0 +1,69 @@
+.pagination-section {
+  position: relative;
+  padding: 1rem;
+  bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  /* margin: 1rem; */
+  /* border: 5px solid white; */
+}
+
+.greater_button,
+.lower_button {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  color: white;
+  border-radius: 100%;
+  padding: 1rem;
+  outline: none;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.same {
+  display: none;
+}
+.numbers {
+  display: flex;
+  font-size: 2rem;
+  color: white;
+  gap: 1rem;
+  list-style: none;
+}
+.numbers li {
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 1rem;
+  margin: 0 1rem 0 1rem;
+}
+.numbers li:hover {
+  background-color: #eeeded;
+  color: black;
+}
+.lower_button:hover {
+  background-color: #eeeded;
+  color: black;
+}
+.greater_button:hover {
+  background-color: #eeeded;
+  color: black;
+}
+.activeStyle {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 462px) {
+  .numbers {
+    justify-content: space-between;
+  }
+  .numbers li {
+    margin: 0 0 0.5rem;
+  }
+  .greater_button,
+  .lower_button {
+    font-size: 1.5rem;
+
+    padding: 0.5rem;
+  }
+}

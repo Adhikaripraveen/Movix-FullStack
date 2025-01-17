@@ -1,0 +1,268 @@
+.modal_section {
+  width: 100%;
+  height: fit-content;
+  top: 10rem;
+  position: relative;
+  padding: 1rem 2rem 8rem;
+  gap: 2rem;
+}
+.modal_img_detail {
+  display: flex;
+  gap: 2rem;
+}
+.img {
+  min-width: 30%;
+  height: 75vh;
+}
+.modal_details {
+  min-width: 60%;
+}
+.img > img {
+  width: 100%;
+  height: 85%;
+  border-radius: 2rem;
+}
+.modal_title {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+.modal_overview {
+  font-size: 2.5rem;
+  color: #90aacb;
+  margin: 1rem 0 1rem;
+}
+.modal_tagline {
+  font-size: 2.5rem;
+  color: #a2416b;
+  text-align: center;
+  margin: 1rem;
+}
+.modal_genres {
+  font-size: 2rem;
+  display: inline;
+  margin: 1rem 0 1rem;
+  color: white;
+}
+.modal_genres_name {
+  color: #a2ff86;
+  display: inline;
+  margin: 1rem;
+}
+.modal_runtime {
+  color: #a2ff86;
+  font-size: 2rem;
+  display: inline;
+}
+.modal_runtime_section {
+  font-size: 2rem;
+  color: white;
+}
+.modal_status {
+  color: white;
+  font-size: 2rem;
+}
+.carousel_container {
+  border: 2px solid white;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+.cast {
+  font-size: 3rem;
+  color: #be5a83;
+  margin: 1rem;
+  font-weight: bolder;
+}
+.trailer_button {
+  height: 5rem;
+  width: 100%;
+  border: 2px solid white;
+  color: white;
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  background: #be5a83;
+  cursor: pointer;
+}
+.modal_created_by {
+  font-size: 2rem;
+  color: white;
+}
+.modal_created_by_name {
+  display: inline;
+  font-size: 2rem;
+  color: #a2ff86;
+  margin: 1rem;
+}
+.modal_status_section {
+  font-size: 2rem;
+  color: white;
+}
+.modal_status {
+  display: inline;
+  font-size: 2rem;
+  color: #a2ff86;
+}
+.season_section {
+  width: 100%;
+  height: fit-content;
+  /* border: 3px solid white; */
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.poster_image {
+  width: 8%;  
+  height: 100%;
+  border-radius: 2rem;
+}
+.poster_image > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.season_details {
+  width: 80%;
+  height: 100%;
+}
+.season_heading {
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+  margin: 1rem;
+}
+.season {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.season_rating {
+  font-size: 2rem;
+  color: white;
+  border: 2px solid yellow;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  display: inline;
+}
+.seasons_date {
+  font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+  display: inline;
+  margin-left: 1rem;
+}
+.seasons_ep_count {
+  font-size: 1rem;
+}
+.season_date {
+  font-size: 2rem;
+  color: white;
+  display: inline-flex;
+  margin-left: 2rem;
+  gap: 2rem;
+}
+.seasons_overview {
+  font-size: 2rem;
+  color: white;
+  margin: 1rem;
+}
+.loading_modal_container {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 10rem;
+  position: relative;
+  padding: 1rem 2rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  animation: flash 1s infinite alternate;
+}
+
+.loading_img_section {
+  min-width: 30%;
+  height: 100vh;
+  border-radius: 2rem;
+}
+.loading_img {
+  min-width: 100%;
+  height: 70%;
+  background-color: #222831;
+  border-radius: 2rem;
+}
+.loading_modal {
+  min-width: 66%;
+}
+.loading_detail {
+  width: 100%;
+  height: 50%;
+  background: #222831;
+  border-radius: 2rem;
+}
+.loading_cast {
+  width: 100%;
+  height: 30%;
+  background: #222831;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+.loading_button {
+  width: 100%;
+  height: 10%;
+  background: #222831;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+.Watchlist > button {
+  border: 2px solid white;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+.Watchlist button:hover {
+  background-color: #be5a83;
+}
+@media (max-width: 762px) {
+  .modal_img_detail {
+    display: block;
+  }
+  .img {
+    height: 50vh;
+  }
+}
+@media (max-width: 462px) {
+  .Watchlist > button {
+    width: fit-content;
+  }
+  .loading_img {
+    height: 80%;
+  }
+  .loading_img_section {
+    min-width: 100%;
+    height: 50vh;
+    border-radius: 2rem;
+  }
+  .loading_modal {
+    min-width: 100%;
+    height: 50vh;
+  }
+
+  .loading_button {
+    height: 15%;
+  }
+  .poster_image {
+    width: 25%;
+  }
+  .season_details {
+    width: 75%;
+  }
+}

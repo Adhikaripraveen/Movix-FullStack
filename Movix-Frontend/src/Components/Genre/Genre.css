@@ -1,0 +1,28 @@
+.genre {
+  border-radius: 1rem;
+  display: inline-flex;
+  color: white;
+  background-color: #a8a196;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+.select_genre {
+  border-radius: 1rem;
+  display: inline-flex;
+  color: white;
+  background-color: #9288f8;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+.genre_section {
+  padding: 0 0 0 4rem;
+}
+@media (max-width: 762px) {
+  .genre_section {
+    padding: 0 0 0 2rem;
+  }
+}
