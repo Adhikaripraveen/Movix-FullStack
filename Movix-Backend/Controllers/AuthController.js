@@ -54,11 +54,12 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
     }
   );
   const isProduction = process.env.NODE_ENV === "production";
+
   res.cookie("authToken", token, {
     httpOnly: true,
     maxAge: 24 * 5 * 60 * 60 * 1000,
     secure: isProduction,
-    sameSite:isProduction? "lax":"strict",
+    sameSite:isProduction? "lax":"None",
     path: "/",
   });
   res.status(200).json({

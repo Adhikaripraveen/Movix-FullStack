@@ -15,6 +15,7 @@ const corsOptions = {
  origin:process.env.frontend_Url,
   credentials: true,
 };
+console.log(process.env.NODE_ENV)
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
