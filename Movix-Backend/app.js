@@ -8,13 +8,15 @@ const GlobalError = require("./Middlewares/GlobalError");
 const cookieParser = require("cookie-parser");
 const WatchListRouter = require("./Routes/WatchListRouter");
 const cors = require("cors");
+const path=require('path')
+
 
 const corsOptions = {
- origin:'http://localhost:3000',
+ origin:process.env.frontend_Url,
   credentials: true,
 };
-
 const app = express();
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
