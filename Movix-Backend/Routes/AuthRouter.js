@@ -20,7 +20,7 @@ router.post("/login", loginUser);
 router.post("/forgetPassword", forgetPassword);
 router.patch("/resetPassword/:token",  resetPassword);
 router.get("/users",authenticate ,fetchAllUsers);
-router.post("/logout",authenticate,logOut)
+router.post("/logout",logOut)
 router.get("/authStatus", authStatus)
 
 router.all("*", NotFound);
