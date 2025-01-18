@@ -151,7 +151,7 @@ exports.logOut = asyncHandler(async (req, res, next) => {
   const isProduction = process.env.NODE_ENV === "production";
   res.clearCookie("authToken",{
     httpOnly: true,
-    maxAge: 24 * 5 * 60 * 60 * 1000,
+   
     secure: isProduction,
     sameSite:isProduction? "None":"lax",
     path: "/",
