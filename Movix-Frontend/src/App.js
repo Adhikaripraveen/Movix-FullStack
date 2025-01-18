@@ -55,7 +55,7 @@ const App = () => {
         />
 
         <Route path="/watchList" element={<WatchList />} />
-        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/ResetPassword/:token" element={<ResetPassword />} />
         <Route
           path="/Login"
           element={<Login checkUser={{ loggedIn, setLoggedIn }} />}
