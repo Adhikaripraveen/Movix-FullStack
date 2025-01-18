@@ -155,7 +155,7 @@ exports.logOut = asyncHandler(async (req, res, next) => {
     sameSite: isProduction ? "None" : "lax",
     path: "/",
   });
-await req.user.save();
+// await req.user.save();
   res.status(200).json({
     success: true,
     message: "You have been Logout successfully",
