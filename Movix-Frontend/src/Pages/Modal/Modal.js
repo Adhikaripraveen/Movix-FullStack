@@ -21,11 +21,14 @@ const Modal = (props) => {
 
   const contentData = async () => {
     try {
+      axios.defaults.withCredentials=false;
       const { data } = await axios.get(
-        `${process.env.REACT_APP_PRODUCTION_URL}/User/gettingContent/${media_type}/${media_id}`
+        `https://api.themoviedb.org/3/${media_type}/${media_id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`, {
+          withCredentials: false,
+        }
       );
 
-      setContentData(data.content);
+      setContentData(data);
       SetLoading(false);
     } catch (error) {
       SetLoading(false);
@@ -42,10 +45,13 @@ const Modal = (props) => {
   }, [media_type, media_id]);
 
   const fetchTrailer = async () => {
+    axios.defaults.withCredentials=false;
     const { data } = await axios.get(
-      `${process.env.REACT_APP_PRODUCTION_URL}/User/gettingContent/${media_type}/${media_id}`
+       `https://api.themoviedb.org/3/${media_type}/${media_id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,{
+        withCredentials: false,
+      }
     );
-    setVideo(data.video);
+    setVideo(data);
   };
 
   const youtube = () => {

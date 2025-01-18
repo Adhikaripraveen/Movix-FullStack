@@ -36,7 +36,7 @@ const App = () => {
        console.log(error)
       }
     };
-console.log(process.env.REACT_APP_PRODUCTION_URL)
+
     checkAuthStatus();
   }, []);
   return (

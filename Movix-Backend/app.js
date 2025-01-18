@@ -15,16 +15,11 @@ const corsOptions = {
  origin:process.env.frontend_Url,
   credentials: true,
 };
-console.log(process.env.NODE_ENV)
+
 const app = express();
-const isProduction = process.env.NODE_ENV === "production";
-console.log(isProduction)
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(cors(corsOptions));
-app.get("*",(req,res)=>{
-  res.sendFile(path.join(__dirname, 'build','index.html'))
-})
 app.use(cookieParser());
 app.use(express.json());
 app.use("/Auth", AuthRouter);

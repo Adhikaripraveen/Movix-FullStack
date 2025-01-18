@@ -54,28 +54,28 @@ exports.deleteUser = asyncHandler(async (req, res, next) => {
     message: "User deleted Successfully",
   });
 });
-exports.gettingContent = asyncHandler(async (req, res, next) => {
-  const { media_type, media_id } = req.params;
+// exports.gettingContent = asyncHandler(async (req, res, next) => {
+//   const { media_type, media_id } = req.params;
 
-  try {
-    const content = await axios.get(
-      `${BASE_URL}${media_type}/${media_id}?api_key=${API_KEY}&language=en-US`
-    );
-    const video = await axios.get(
-      `${BASE_URL}${media_type}/${media_id}/videos?api_key=${API_KEY}&language=en-US`
-    );
-    const carouselData = await axios.get(
-      `${BASE_URL}${media_type}/${media_id}/credits?api_key=${API_KEY}&language=en-US`
-    );
-    // Send the data received from TMDB to the frontend
-    res.json({
-      content: content.data,
-      video: video.data,
-      carouselData: carouselData.data,
-    });
-  } catch (error) {
-    console.error("Error fetching data from TMDB:", error);
-    res.status(500).json({ message: "Failed to fetch data from TMDB" });
-  }
-});
+//   try {
+//     const content = await axios.get(
+//       `${BASE_URL}${media_type}/${media_id}?api_key=${API_KEY}&language=en-US`
+//     );
+//     const video = await axios.get(
+//       `${BASE_URL}${media_type}/${media_id}/videos?api_key=${API_KEY}&language=en-US`
+//     );
+//     const carouselData = await axios.get(
+//       `${BASE_URL}${media_type}/${media_id}/credits?api_key=${API_KEY}&language=en-US`
+//     );
+//     // Send the data received from TMDB to the frontend
+//     res.json({
+//       content: content.data,
+//       video: video.data,
+//       carouselData: carouselData.data,
+//     });
+//   } catch (error) {
+//     console.error("Error fetching data from TMDB:", error);
+//     res.status(500).json({ message: "Failed to fetch data from TMDB" });
+//   }
+// });
   

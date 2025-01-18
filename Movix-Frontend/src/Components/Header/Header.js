@@ -70,7 +70,14 @@ const Header = (props) => {
       navigate("/trending")
     }
   },[loggedIn])
-
+const handleLogIn=()=>{
+   showLog(true)
+   navigate("/Login")
+}
+const handleSignIn =()=>{
+  showLog(true);
+  navigate("/Sign-in")
+}
   
   return (
     <>
@@ -97,14 +104,14 @@ const Header = (props) => {
             <div className="drop_down">
               <ul>
                 <li>
-                  <button className="drop_button" onClick={() => showLog(true)}>
+                  <button className="drop_button" onClick={handleLogIn}>
                     Log in
                   </button>
                 </li>
                 <li>
                   <button
                     className="drop_button"
-                    onClick={() => showSign(true)}
+                    onClick={handleSignIn}
                   >
                     Sign in
                   </button>

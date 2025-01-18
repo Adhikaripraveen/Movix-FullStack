@@ -6,11 +6,15 @@ import "./carousel.css";
 const Carousel = ({ id, media_type }) => {
   const [carousel, setCarousel] = useState([]);
   const fetchCarousel = async () => {
-    const response = await axios.get(
-      `${process.env.REACT_APP_DEVELOPMENT_URL}/User/gettingContent/${media_type}/${id}`
+    axios.defaults.withCredentials=false;
+    const {data} = await axios.get(
+      `https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,{
+        withCredentials: false,
+      }
+      
     );
-   
-    setCarousel(response.data.carouselData.cast);
+   console.log(data.cast)
+    setCarousel(data.cast);
   };
 
   useEffect(() => {
