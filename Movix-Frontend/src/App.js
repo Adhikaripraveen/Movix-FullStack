@@ -23,7 +23,7 @@ const App = () => {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        axios.defaults.credentials = true;
+        axios.defaults.withCredentials = true;
         const { data } = await axios.get(
           `${process.env.REACT_APP_PRODUCTION_URL}/Auth/authStatus`,
           {

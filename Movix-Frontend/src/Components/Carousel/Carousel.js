@@ -13,7 +13,7 @@ const Carousel = ({ id, media_type }) => {
       }
       
     );
-   console.log(data.cast)
+  
     setCarousel(data.cast);
   };
 
