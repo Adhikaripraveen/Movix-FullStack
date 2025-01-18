@@ -18,7 +18,7 @@ const corsOptions = {
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
-
+console.log(process.env.BASE_URL)
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
