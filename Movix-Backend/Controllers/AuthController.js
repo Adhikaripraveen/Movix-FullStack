@@ -93,9 +93,7 @@ exports.forgetPassword = asyncHandler(async (req, res, next) => {
     existingUser.resetToken = hashedToken;
     existingUser.resetTokenExpiry = Date.now() + 10 * 60 * 1000;
     await existingUser.save({ validateBeforeSave: false });
-    const resetUrl = `${req.protocol}://${req.get(
-      "host"
-    )}/Auth/resetPassword/${randomToken}`;
+  const resetUrl = `https://movix-fullstack.onrender.com/Auth/resetPassword/${randomToken}`;
     const message = `We have received the reset password request.Please use the below link to reset your Password \n\n${resetUrl}\n\n This reset password link will be valid for 10 minutes.`;
 
     try {
