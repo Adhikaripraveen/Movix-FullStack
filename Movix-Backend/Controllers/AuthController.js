@@ -59,7 +59,7 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
     httpOnly: true,
     maxAge: 24 * 5 * 60 * 60 * 1000,
     secure: isProduction,
-    sameSite:isProduction? "None":"lax",
+    sameSite: isProduction ? "None" : "lax",
     path: "/",
   });
   res.status(200).json({
@@ -149,11 +149,11 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
 });
 exports.logOut = asyncHandler(async (req, res, next) => {
   const isProduction = process.env.NODE_ENV === "production";
-  res.clearCookie("authToken",{
+  res.clearCookie("authToken", {
     httpOnly: true,
-   
+    domain: process.env.BASE_URL,
     secure: isProduction,
-    sameSite:isProduction? "None":"lax",
+    sameSite: isProduction ? "None" : "lax",
     path: "/",
   });
   res.status(200).json({
