@@ -8,18 +8,18 @@ const GlobalError = require("./Middlewares/GlobalError");
 const cookieParser = require("cookie-parser");
 const WatchListRouter = require("./Routes/WatchListRouter");
 const cors = require("cors");
-const path=require('path')
+const path = require("path");
 
 ///this is deployed folder
 const corsOptions = {
- origin:"https://movix-fullstack.onrender.com",
+  origin: "https://movix-fullstack.onrender.com",
   credentials: true,
 };
 
 const app = express();
-app.use(express.static(path.join(__dirname,'build')));
+app.use(express.static(path.join(__dirname, "build")));
 
-
+console.log(path.join(__dirname, "build", "index.html"));
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
@@ -28,8 +28,14 @@ app.use("/User", UserRouter);
 app.use("/Comment", CommentRouter);
 app.use("/WatchList", WatchListRouter);
 app.use(GlobalError);
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname,'build','index.html'));
+app.get("*", (req, res) => {
+  console.log(`Request received for: ${req.originalUrl}`);
+  res.sendFile(path.join(__dirname, "build", "index.html"), (err) => {
+    if (err) {
+      console.error(`Error sending index.html: ${err}`);
+      res.status(500).send(err);
+    }
+  });
 });
 
 app.listen(PORT_NUMBER, () => {
