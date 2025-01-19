@@ -55,7 +55,7 @@ const Header = (props) => {
       const response=await axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/Auth/logout`,{
         withCredentials:true,
       });
-      console.log(response)
+      
       sessionStorage.removeItem("user")
      
     }catch(err){

@@ -32,7 +32,7 @@ const App = () => {
         const { data } = await axios.get(`${url}/Auth/authStatus`, {
           withCredentials: true,
         });
-        console.log(data);
+        
         setLoggedIn(data.isLoggedIn);
       } catch (error) {
         console.error("Error checking authentication:", error);

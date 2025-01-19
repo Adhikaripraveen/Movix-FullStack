@@ -74,7 +74,7 @@ const EditProfile = () => {
       axios.defaults.withCredentials = true;
 
       const response = await axios.patch(
-        `${process.env.REACT_APP_DEVELOPMENT_URL}/User/updateProfile/`,
+        `${process.env.REACT_APP_PRODUCTION_URL}/User/updateProfile/`,
         updatedProfileForm,
         {
           withCredentials: true,

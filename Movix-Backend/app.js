@@ -18,10 +18,7 @@ const corsOptions = {
 
 const app = express();
 app.use(express.static(path.join(__dirname,'../movix-frontend', 'build')));
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../movix-frontend/build', 'index.html'));
-// });
-console.log('Resolved build path:', path.join(__dirname, '../movix-frontend/build'));
+
 
 app.use(cors(corsOptions));
 app.use(cookieParser());
