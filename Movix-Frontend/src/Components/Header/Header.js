@@ -52,7 +52,7 @@ const Header = (props) => {
   const handleLogOut=async()=>{
     try{
       axios.defaults.withCredentials=true;
-      const response=await axios.post(`${process.env.REACT_APP_DEVELOPMENT_URL}/Auth/logout`,{
+      const response=await axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/Auth/logout`,{
         withCredentials:true,
       });
       console.log(response)
