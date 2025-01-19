@@ -66,11 +66,7 @@ const Header = (props) => {
     setLoggedIn(false);
     navigate("/trending")
   }
-  useEffect(()=>{
-    if(!loggedIn){
-      navigate("/trending")
-    }
-  },[loggedIn])
+  
 const handleLogIn=()=>{
    showLog(true)
    navigate("/Login")

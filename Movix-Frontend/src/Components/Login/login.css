@@ -35,7 +35,7 @@
 }
 .button_container >button{
   width:fit-content;
-  height: 3.5rem;
+  height: fit-content;
   color: white;
   font-size: 1.5rem;
   margin-right: 1rem;
@@ -44,7 +44,7 @@
   cursor: pointer;
   border-radius: 1rem;
   transition: all 0.3s ease;
-  padding:0.5rem;
+  padding:1rem;
 }
 
 .button_container > button:hover {
@@ -69,18 +69,12 @@
   backdrop-filter: blur(10px);
   z-index: 100;
 }
-.error {
-  color: red;
-  font-size: 2rem;
-}
-.success {
-  color: green;
-  font-size: 2rem;
-}
+
 @media (max-width: 462px) {
   .login_from {
-    width: 60%;
+    width: 90%;
     height: fit-content;
-    left: 25%;
+    left: 5%;
+
   }
 }

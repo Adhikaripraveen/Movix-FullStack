@@ -10,9 +10,9 @@ const WatchListRouter = require("./Routes/WatchListRouter");
 const cors = require("cors");
 const path=require('path')
 
-
+///this is deployed folder
 const corsOptions = {
- origin:"http://localhost:3000",
+ origin:"https://movix-fullstack.onrender.com",
   credentials: true,
 };
 
