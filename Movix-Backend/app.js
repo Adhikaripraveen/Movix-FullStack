@@ -17,7 +17,7 @@ const corsOptions = {
 };
 
 const app = express();
-app.use(express.static(path.join(__dirname,'../movix-frontend', 'build')));
+app.use(express.static(path.join(__dirname,'build')));
 
 
 app.use(cors(corsOptions));
@@ -28,6 +28,9 @@ app.use("/User", UserRouter);
 app.use("/Comment", CommentRouter);
 app.use("/WatchList", WatchListRouter);
 app.use(GlobalError);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname,'build','index.html'));
+});
 
 app.listen(PORT_NUMBER, () => {
   console.log("Server is listening on  " + PORT_NUMBER);
